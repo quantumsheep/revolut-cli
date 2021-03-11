@@ -11,6 +11,8 @@ export function setConfigFilePath(path: string) {
 
 export interface Config {
   deviceId: string;
+  phone?: string;
+  tokenId?: string;
   accessToken?: string;
   tokenExpiryDate?: number;
   user?: {

@@ -20,13 +20,12 @@ async function request<T>(method: Method, path: string, requestConfig?: RequestC
         'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.16; rv:86.0) Gecko/20100101 Firefox/86.0',
         'x-browser-application': 'WEB_CLIENT',
         'x-client-version': '100.0',
-        'x-device-id': config.get('deviceId'),
+        'x-device-id': await config.get('deviceId'),
       },
     });
 
     return data;
   } catch (e) {
-    // console.log(e?.response);
     throw e?.response?.data?.message ?? e;
   }
 }
