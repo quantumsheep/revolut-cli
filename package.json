@@ -6,11 +6,21 @@
   "scripts": {
     "start": "node .",
     "dev": "tsc-watch --onSuccess \"node .\"",
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
+  "bin": {
+    "revolut": "./dist/index.js"
+  },
+  "contributors": [
+    {
+      "name": "Nathanael Demacon",
+      "email": "nathanael.dmc@outlook.fr"
+    }
+  ],
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Nathanael Demacon <nathanael.dmc@outlook.fr>",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "chalk": "^4.1.0",
