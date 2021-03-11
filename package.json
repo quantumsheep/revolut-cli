@@ -1,5 +1,5 @@
 {
-  "name": "revolut",
+  "name": "revolut-cli",
   "version": "1.0.0",
   "description": "Revolut for the terminal",
   "main": "dist/index.js",
