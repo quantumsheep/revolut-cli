@@ -24,7 +24,7 @@ export async function request<T>(method: Method, path: string, requestConfig?: R
     const user = await config.get('user');
 
     if (accessToken && user?.id) {
-      headers['authorization'] = btoa(`${user.id}:${accessToken}`);
+      headers['authorization'] = `Basic ${Buffer.from(`${user.id}:${accessToken}`).toString('base64')}`;
     }
   }
 
