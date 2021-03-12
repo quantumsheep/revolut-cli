@@ -103,7 +103,7 @@ async function loginProcess() {
 export async function loginIfDisconnected() {
   const tokenExpiryDate = await config.get('tokenExpiryDate');
 
-  if (!tokenExpiryDate || moment(tokenExpiryDate, 'ms').isBefore(moment())) {
+  if (!tokenExpiryDate || moment(tokenExpiryDate, 'x').isBefore(moment())) {
     await loginProcess();
   }
 }
